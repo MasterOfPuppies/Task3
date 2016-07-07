@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="FirstTest" >
+        <classes>
+            <class name="Class1"/>
+            <class name="Class2"/>
+        </classes>
+    </test>
+    <test name="TestWithParams">
+        <parameter name="xmlParamsX" value="3"/>
+        <parameter name="xmlParamsY" value="5" />
+        <parameter name="xmlParamsZ" value="15" />
+        <classes>
+            <class name="Class1">
+                <methods>
+                    <include name="multiply_Test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
