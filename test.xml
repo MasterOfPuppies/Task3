@@ -2,6 +2,13 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="FirstTest" >
+        <groups>
+            <run>
+                <include name="fast"/>
+                <include name="smoke"/>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
         <classes>
             <class name="Class1"/>
             <class name="Class2"/>
